@@ -6,6 +6,7 @@ require 'arel/visitors/postgresql'
 require 'arel/visitors/mysql'
 require 'arel/visitors/mssql'
 require 'arel/visitors/oracle'
+require 'arel/visitors/ibm_db'
 require 'arel/visitors/join_sql'
 require 'arel/visitors/where_sql'
 require 'arel/visitors/order_clauses'
@@ -22,6 +23,7 @@ module Arel
       'oracle_enhanced' => Arel::Visitors::Oracle,
       'sqlite'          => Arel::Visitors::SQLite,
       'sqlite3'         => Arel::Visitors::SQLite,
+      'ibm_db'          => Arel::Visitors::IbmDB,
     }
 
     ENGINE_VISITORS = Hash.new do |hash, engine|
